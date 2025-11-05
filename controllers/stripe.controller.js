@@ -48,9 +48,8 @@ export const createCheckoutFromDetails = async (req, res) => {
       customer_creation: "if_required",
 
       // กลับหน้าสำเร็จ (ตามที่โอห์มใช้ได้แล้ว)
-      success_url: `${process.env.FRONTEND_URL}/booking/success?session_id={CHECKOUT_SESSION_ID}`,
-      // กดยกเลิก -> กลับหน้า booking พร้อมกู้ข้อมูล
-      cancel_url: `${process.env.FRONTEND_URL}/booking?cancelled=1`,
+success_url: `${process.env.FRONTEND_URL}/booking/success?session_id={CHECKOUT_SESSION_ID}`,
+cancel_url:  `${process.env.FRONTEND_URL}/booking?cancelled=1`,
 
       line_items: [
         {
